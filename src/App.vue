@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <app-header v-bind:title="title"></app-header>
+    <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to my first Vue.js app"/>
     <app-ninja v-bind:ninjas="ninjas"></app-ninja>
@@ -33,6 +33,11 @@ export default {
                 {name: 'Yoshi', speciality: 'Data Diggin', show: false}
             ],
         title: "Vue Ninja"
+    }
+  },
+  methods: {
+    updateTitle: function(updatedTitle){
+      this.title = updatedTitle;
     }
   }
 }
