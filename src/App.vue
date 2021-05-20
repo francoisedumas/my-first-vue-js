@@ -3,6 +3,7 @@
     <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to my first Vue.js app"/>
+    <app-blog></app-blog>
     <app-ninja v-bind:ninjas="ninjas"></app-ninja>
     <app-footer v-bind:title="title"></app-footer>
   </div>
@@ -13,6 +14,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import Ninjas from './components/Ninjas.vue'
+import addBlog from './components/addBlog.vue'
 
 export default {
   name: 'App',
@@ -21,6 +23,7 @@ export default {
     'app-header': Header,
     'app-footer': Footer,
     'app-ninja': Ninjas,
+    'app-blog': addBlog
   },
   data(){
     return {
@@ -51,5 +54,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+body{
+    margin: 0;
+    font-family: 'Nunito SemiBold';
 }
 </style>
