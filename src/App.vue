@@ -4,6 +4,7 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to my first Vue.js app"/>
     <app-blog></app-blog>
+    <show-blogs></show-blogs>
     <app-ninja v-bind:ninjas="ninjas"></app-ninja>
     <app-footer v-bind:title="title"></app-footer>
   </div>
@@ -15,6 +16,7 @@ import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import Ninjas from './components/Ninjas.vue'
 import addBlog from './components/addBlog.vue'
+import showBlogs from './components/showBlogs.vue'
 
 export default {
   name: 'App',
@@ -23,7 +25,8 @@ export default {
     'app-header': Header,
     'app-footer': Footer,
     'app-ninja': Ninjas,
-    'app-blog': addBlog
+    'app-blog': addBlog,
+    'show-blogs': showBlogs
   },
   data(){
     return {
